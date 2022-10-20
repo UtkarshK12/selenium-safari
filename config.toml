@@ -1,0 +1,16 @@
+[events]
+publish = "tcp://GRID-IP:4442"
+subscribe = "tcp://GRID-IP:4443"
+
+[server]
+host = "MYMACIP"
+[node]
+session-timeout = "300"
+override-max-sessions = false
+detect-drivers = false
+max-sessions = 1
+
+[[node.driver-configuration]]
+display-name = ""
+stereotype = '{"browserName": "", "browserVersion": "", "platformName": "Linux"}'
+max-sessions = 1

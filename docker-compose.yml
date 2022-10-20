@@ -1,0 +1,16 @@
+version: "3"
+
+services: 
+  selenium-safari:
+    image: selenium/node-base:4.1.3-20220327
+    container_name: selenium-safari
+    shm_size: "2g"
+    environment: 
+    - SE_EVENT_BUS_HOST=GRID-IP
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    - SE_NODE_HOST=IPOFMYMAC
+    ports: 
+    - 5555:5555
+    volumes: 
+    - ./config.toml:/opt/selenium/config.toml
